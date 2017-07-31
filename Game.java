@@ -8,12 +8,14 @@ public class Game implements ActionListener {
 	//Initializing objects
 	//JFrame
 	JFrame j = new JFrame();
-	//Menu Button
+	//Menu Buttons
 	JButton menuButton = new JButton("Start");
-	//Menu JPanel
+	//Menu JPanels
 	Menu menu = new Menu();
-	//Running Game
+	//Objects of classes
 	RunningGame rg = new RunningGame();
+	//JLabels
+	JLabel opening = new JLabel("You wake up after crash landing on an unknown planet. You were a holy crusader attempting to conquer the holy land of Martakis. However, you were shot down during battle.");;;
 	
 	
 	public static void main(String[] args) {
@@ -31,7 +33,8 @@ public class Game implements ActionListener {
 		j.add(rg);
 		rg.setVisible(true);
 		rg.setLayout(null);
-		
+		rg.add(opening);
+		opening.setBounds(100, 100, 1200, 100);
 		
 	}
 
@@ -49,7 +52,7 @@ public class Game implements ActionListener {
 		menuButton.setBounds(550, 400, 200, 50);
 		//Adds the current action listener method
 		menuButton.addActionListener(this);
-		
+	
 		
 	}
 	
